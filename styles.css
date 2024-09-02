@@ -7,6 +7,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    flex-direction: column;
 }
 
 nav {
@@ -168,17 +169,6 @@ p {
     color: black;
 }
 
-body {
-    font-family: 'Times New Roman', Times, serif;
-    margin: 0;
-    padding: 0;
-    background-color: #8A9A5B; /* Sage green background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column;
-}
 .contact-container {
     background-color: #fff;
     border: 1px solid #ccc;
