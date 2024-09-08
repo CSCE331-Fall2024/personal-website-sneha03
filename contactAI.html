@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me</title>
-    <link rel="stylesheet" href="styles.css">
+    <link id="stylesheet" rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
 </head>
@@ -38,5 +38,13 @@
                 Make the background sage green. </p>
         </div>
     </div>
+    <script>
+        window.onload = function() {
+            const savedStyle = localStorage.getItem('preferredStyle');
+            if (savedStyle) {
+                document.getElementById('stylesheet').setAttribute('href', savedStyle);
+            }
+        }
+    </script>
 </body>
 </html>

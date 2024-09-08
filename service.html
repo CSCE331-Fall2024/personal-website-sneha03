@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website - Home</title>
-    <link rel="stylesheet" href="styles.css">
+    <link id="stylesheet" rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav>
@@ -38,6 +38,14 @@
             </p>
         </div>
     </div>
+    <script>
+        window.onload = function() {
+            const savedStyle = localStorage.getItem('preferredStyle');
+            if (savedStyle) {
+                document.getElementById('stylesheet').setAttribute('href', savedStyle);
+            }
+        }
+    </script>
 </body>
 </html>
 

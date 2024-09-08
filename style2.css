@@ -1,0 +1,241 @@
+@font-face {
+    font-family: "pixelFont";
+    src: url("./fonts/slkscr.ttf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
+    font-family: "pixelFont";
+}
+
+nav {
+    padding: 1em;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    display: block;
+}
+
+nav ul li a.active {
+    color: #d23bbb;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    padding: 2em;
+}
+
+.home img {
+    display: none;
+}
+
+.home h1 {
+    color: #ec45d3;
+    font-size: 60px;
+}
+
+.bio {
+    font-size: 20px;
+    color: white;
+    margin-top: 20px;
+    max-width: 600px;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-family: "pixelFont";
+    font-size: 1em;
+    background-color: #8b8d8c;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    color: #d23bbb;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 40px;
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.project img {
+    width: 150px;
+    height: auto;
+    border: 2px solid #000;
+    margin-right: 20px;
+}
+
+.projbio {
+    font-size: 1em;
+    color: #f5f0f0;
+    flex: 1;
+    max-width: 600px;
+    word-wrap: break-word;
+}
+
+.tech-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 2:1 ratio for bio and resume */
+    gap: 20px; /* Space between columns */
+    width: 80%;
+    max-width: 1200px;
+    margin-top: 350px; /* Center the container and adjust margin */
+    padding: 10px; /* Add some padding for spacing */
+}
+
+.techbio {
+    color: white;
+}
+
+.clickable-image {
+    float: right;
+    margin-top: 200px;
+    width: 500px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+    transition: opacity 0.3s; /* Optional: Add a transition effect */
+}
+
+.clickable-image:hover {
+    opacity: 0.8; /* Optional: Change opacity on hover */
+}
+
+.techbio h1 {
+    color: white;
+    font-size: 2em;
+}
+
+.techbio p {
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+.service-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 90px;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 40px;
+}
+
+.service {
+    text-align: center;
+    width: 30%;
+}
+
+.service img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #000;
+    margin-bottom: 10px;
+}
+
+.servbio {
+    font-size: 1em;
+    color: white;
+}
+
+.contact-container {
+    
+    padding: 2em;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 0;
+    color: white;
+    font-size: 2em;
+}
+
+.contact-info {
+    margin: 1em 0;
+}
+
+.contact-info a {
+    color: white; /* Darker sage green for links */
+    text-decoration: none;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5em 0;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: white; /* Even darker sage green on hover */
+}
+
+.contact-info a img {
+    margin-right: 8px;
+    width: 24px;
+    height: 24px;
+}
+
+.prompt-box {
+    margin-top: 2em;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #e7e7e7;
+    font-style: italic;
+    color: #555;
+}

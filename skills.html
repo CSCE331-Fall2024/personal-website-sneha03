@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website - Home</title>
-    <link rel="stylesheet" href="styles.css">
+    <link id="stylesheet" rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav>
@@ -16,9 +16,6 @@
             <li><a href="contactAI.html">Contact</a></li>
         </ul>
     </nav>
-    <div>
-
-    </div>
     <div class="tech-container">
         <div class="techbio">
             <h1>About Me</h1>
@@ -37,25 +34,36 @@
                 I was able to significantly contribute to the possibility of equipment automation and understand how the data I acquired in my project can be 
                 utilized to enhance efficiency.
             </p>
-        <p>
-            In addition, I was given the opportunity to serve as the Registration Coordinator for an annual engineering event that Texas A&M University’s 
-            Student Engineers’ Council hosts, and was able to integrate and expand my knowledge in programming to solve issues. One particular issue we encountered was 
-            with the registration platform where the applicant’s sign-up information was transferred to Excel in a disorganized and cluttered format. 
-            So, I took the initiative to use what I know about manipulating Excel sheets with Python and quickly learned to utilize the Pandas library to efficiently create an organized and 
-            readable sign-up information sheet that can be easily shared with my team. This in turn helped strengthen communication within my team and ultimately even helped the Finance Chair
-             in identifying participants who needed refunds and reimbursements quickly. 
-        </p>
-        <p>
-            These experiences have heightened my deep interest and passion for Data Science and Analytics and pushed me to dive deeper into how this special field
-             contributes in other ways: helping maximize a company’s finances, mitigating and identifying potential risks, and even helping with decision-making. 
-             The way data can be utilized to derive a multitude of solutions and ideas inspires me to pursue a career in the field of Data Science, 
-             and it might even be because of my interest in math!
-        </p>
-
-        <div class="resume">
-            <iframe src="https://drive.google.com/file/d/1uzQx_TbP-HecU2MU_XbT2_prcK6SCTfW/preview" width="600" height="500"></iframe>
+            <p>
+                In addition, I was given the opportunity to serve as the Registration Coordinator for an annual engineering event that Texas A&M University’s 
+                Student Engineers’ Council hosts, and was able to integrate and expand my knowledge in programming to solve issues. One particular issue we encountered was 
+                with the registration platform where the applicant’s sign-up information was transferred to Excel in a disorganized and cluttered format. 
+                So, I took the initiative to use what I know about manipulating Excel sheets with Python and quickly learned to utilize the Pandas library to efficiently create an organized and 
+                readable sign-up information sheet that can be easily shared with my team. This in turn helped strengthen communication within my team and ultimately even helped the Finance Chair
+                 in identifying participants who needed refunds and reimbursements quickly. 
+            </p>
+            <p>
+                These experiences have heightened my deep interest and passion for Data Science and Analytics and pushed me to dive deeper into how this special field
+                 contributes in other ways: helping maximize a company’s finances, mitigating and identifying potential risks, and even helping with decision-making. 
+                 The way data can be utilized to derive a multitude of solutions and ideas inspires me to pursue a career in the field of Data Science, 
+                 and it might even be because of my interest in math!
+            </p>
         </div>
+        
+        <a href="https://drive.google.com/file/d/1uzQx_TbP-HecU2MU_XbT2_prcK6SCTfW/preview" target="_blank">
+            <img src="pics/resumeImage.png" alt="resume" class="clickable-image">
+        </a>
+
+        
     </div>
+    <script>
+        window.onload = function() {
+            const savedStyle = localStorage.getItem('preferredStyle');
+            if (savedStyle) {
+                document.getElementById('stylesheet').setAttribute('href', savedStyle);
+            }
+        }
+    </script>
 </body>
 </html>
 
