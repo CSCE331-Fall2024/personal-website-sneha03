@@ -57,6 +57,14 @@ nav ul li a:hover {
     position: relative;
 }
 
+
+.cloud1 {
+    display: none;
+}
+
+.cloud2 {
+    display: none;
+}
 h1 {
     font-size: 2em;
     margin: 0;
@@ -130,37 +138,37 @@ button:hover {
     word-wrap: break-word;
 }
 
-.tech-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 20px;
-    width: 80%;
-    max-width: 1200px;
-    margin-top: 5%;
-}
 
 .tech-container {
     display: grid;
-    grid-template-columns: 2fr 1fr; /* 2:1 ratio for bio and resume */
-    gap: 20px; /* Space between columns */
+    grid-template-columns: 2fr 1fr; 
+    gap: 20px; 
     width: 80%;
     max-width: 1200px;
-    margin-top: 350px; /* Center the container and adjust margin */
-    padding: 10px; /* Add some padding for spacing */
+    margin-top: 550px; 
+    padding: 10px; 
+}
+
+.resume {
+    width: 35%;
+    text-align: right;
+}
+.tech-container img{
+    display: none;
 }
 
 .techbio {
+    margin-top: 200px;
     color: black;
 }
 
 .clickable-image {
     float: right;
     margin-top: 50px;
-    width: 500px; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
-    cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
-    transition: opacity 0.3s; /* Optional: Add a transition effect */
+    width: 500px; 
+    height: auto; 
+    cursor: pointer; 
+    transition: opacity 0.3s; 
 }
 
 .clickable-image:hover {
@@ -173,7 +181,7 @@ button:hover {
 }
 
 .techbio p {
-    font-size: 12px;
+    font-size: 16px;
     line-height: 1.6;
 }
 

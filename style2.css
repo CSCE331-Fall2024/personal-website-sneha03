@@ -67,6 +67,45 @@ nav ul li a:hover {
     font-size: 60px;
 }
 
+@keyframes moveLeftRight {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes moveRightLeft {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+
+/* Apply the animation to the images */
+.cloud1 img {
+    animation: moveLeftRight 2s infinite; 
+}
+
+.cloud2 img {
+    animation: moveRightLeft 2s infinite;
+}
+
+
+.cloud1 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: auto;
+    
+}
+
+.cloud2 img {
+    position: absolute;
+    bottom: 4;
+    right: 0;
+    width: 30%;
+    height: auto;
+}
+
 .bio {
     font-size: 20px;
     color: white;
@@ -97,58 +136,64 @@ button:hover {
 
 .projects-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 90px;
     align-items: flex-start;
     padding: 20px;
     gap: 40px;
 }
 
 .project {
-    display: flex;
-    align-items: center;
+    text-align: center;
     width: 100%;
 }
 
 .project img {
-    width: 150px;
+    width: 70%;
     height: auto;
-    border: 2px solid #000;
-    margin-right: 20px;
+    margin-bottom: 10px;
 }
 
 .projbio {
     font-size: 1em;
+    text-align: center;
     color: #f5f0f0;
-    flex: 1;
     max-width: 600px;
     word-wrap: break-word;
 }
 
 .tech-container {
     display: grid;
-    grid-template-columns: 2fr 1fr; /* 2:1 ratio for bio and resume */
-    gap: 20px; /* Space between columns */
+    grid-template-columns: 2fr 1fr; 
+    gap: 20px; 
     width: 80%;
     max-width: 1200px;
-    margin-top: 350px; /* Center the container and adjust margin */
-    padding: 10px; /* Add some padding for spacing */
+    margin-top: 350px; 
+    padding: 10px; 
 }
 
+.tech-container img{
+    float: left;
+}
 .techbio {
     color: white;
 }
 
+.resume {
+    display: none;
+}
 .clickable-image {
     float: right;
     margin-top: 200px;
-    width: 500px; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
-    cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
-    transition: opacity 0.3s; /* Optional: Add a transition effect */
+    width: 500px; 
+    height: auto; 
+    cursor: pointer; 
+    transition: opacity 0.3s; 
 }
 
 .clickable-image:hover {
-    opacity: 0.8; /* Optional: Change opacity on hover */
+    opacity: 0.8; 
 }
 
 .techbio h1 {
@@ -180,7 +225,6 @@ button:hover {
 .service img {
     width: 100%;
     height: auto;
-    border: 2px solid #000;
     margin-bottom: 10px;
 }
 
@@ -210,7 +254,7 @@ h1 {
 }
 
 .contact-info a {
-    color: white; /* Darker sage green for links */
+    color: white; 
     text-decoration: none;
     font-size: 1.2em;
     display: flex;
@@ -221,7 +265,7 @@ h1 {
 }
 
 .contact-info a:hover {
-    color: white; /* Even darker sage green on hover */
+    color: white; 
 }
 
 .contact-info a img {

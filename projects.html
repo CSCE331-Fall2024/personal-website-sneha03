@@ -16,24 +16,24 @@
             <li><a href="contactAI.html">Contact</a></li>
         </ul>
     </nav>
-
+    
     <div class="projects-container">
         <div class="project">
-            <img src="pics/HWO.png" alt="Project 1">
+            <img id="project1" src="pics/HWO.png" alt="Project 1">
             <p class="projbio">This past summer, I interned at Halliburton and got the opportunity to work on a project
                 that enabled real-time data communication between an oil well (<a href="https://www.halliburton.com/en/completions/well-intervention-and-diagnostics/hydraulic-workover">HWO</a>) and Halliburton's well intervention software using
                 OPC UA (Open Platform Communications Unified Architecture).
             </p>
         </div>
         <div class="project">
-            <img src="pics/secLogo.png" alt="Project 2">
+            <img id="project2" src="pics/secLogo.png" alt="Project 2">
             <p class="projbio">As a registration coordinator for the <a href="https://tamu.estore.flywire.com/products/fall-2024-envision-conference-237591">EnVision Conference</a>, an event hosted by A&M's 
                 <a href="https://sec.tamu.edu/">Student Engineers' Council</a>, I utilized Python to organize sign-up information of participants when
                 we ran into an issue when acquiring sign-up information from the platform.
             </p>
         </div>
         <div class="project">
-            <img src="pics/spotifyLogo.png" alt="Project 3">
+            <img id="project3" src="pics/spotifyLogo.png" alt="Project 3">
             <p class="projbio">As a participant of <a href="https://ai-4-all.org/">AI4All</a>, I worked on a project 
                 where I used machine learning to create an algorithm that analyzed the attributes of the top 50 
                 Spotify songs of 2019 to predict the popularity of future songs, resulting in a 50% accuracy score.</p>
@@ -42,8 +42,30 @@
     <script>
         window.onload = function() {
             const savedStyle = localStorage.getItem('preferredStyle');
+            const stylesheet = document.getElementById('stylesheet');
+            const projectImages = [
+                document.getElementById("project1"),
+                document.getElementById('project2'),
+                document.getElementById('project3')
+            ];
+
+            
             if (savedStyle) {
-                document.getElementById('stylesheet').setAttribute('href', savedStyle);
+                stylesheet.setAttribute('href', savedStyle);
+                changeImages(savedStyle);
+            }
+
+           
+            function changeImages(style) {
+                if (style === 'style2.css') {
+                    projectImages[0].src = "pics/HWOpixel.png"; 
+                    projectImages[1].src = "pics/secPixel.png"; 
+                    projectImages[2].src = "pics/spotifyPixel.png"; 
+                } else {
+                    projectImages[0].src = "pics/HWO.png"; 
+                    projectImages[1].src = "pics/secLogo.png"; 
+                    projectImages[2].src = "pics/spotifyLogo.png"; 
+                }
             }
         }
     </script>
