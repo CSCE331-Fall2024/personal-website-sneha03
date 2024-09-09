@@ -248,7 +248,11 @@ h1 {
     width: 24px;
     height: 24px;
 }
-.prompt-box {
+
+.style2prompt-box {
+    display: none;
+}
+.style1prompt-box {
     margin-top: 2em;
     padding: 1em;
     border: 1px solid #ccc;
