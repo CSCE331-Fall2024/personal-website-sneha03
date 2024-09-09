@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website - Home</title>
+    <link rel="preload" href="style2.css" as="style">
     <link id="stylesheet" rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -51,22 +52,15 @@
         </div>
         
         <a href="https://drive.google.com/file/d/1uzQx_TbP-HecU2MU_XbT2_prcK6SCTfW/preview" target="_blank">
-            <img src="pics/resumeImage.png" alt="resume" class="clickable-image">
+            <img src="pics/resumeImage.png" alt="resume" class="clickable-image" loading="lazy">
         </a>
 
         <div class="resume">
-            <iframe src="https://drive.google.com/file/d/1uzQx_TbP-HecU2MU_XbT2_prcK6SCTfW/preview" width="600" height="500"></iframe>
+            <iframe src="https://drive.google.com/file/d/1uzQx_TbP-HecU2MU_XbT2_prcK6SCTfW/preview" width="600" height="500" loading="lazy"></iframe>
 
         
     </div>
-    <script>
-        window.onload = function() {
-            const savedStyle = localStorage.getItem('preferredStyle');
-            if (savedStyle) {
-                document.getElementById('stylesheet').setAttribute('href', savedStyle);
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
 

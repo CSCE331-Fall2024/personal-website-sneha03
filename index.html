@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Website</title>
+    <link rel="preload" href="style2.css" as="style">
     <link id="stylesheet" rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -30,23 +31,8 @@
             student with a minor in Statistics at Texas A&M University! 
         </p>
         <button onclick="toggleStyle()">Toggle Style</button>
-    
-        <script>
-            function toggleStyle() {
-                const currentStyle = document.getElementById('stylesheet').getAttribute('href');
-                const newStyle = currentStyle === 'styles.css' ? 'style2.css' : 'styles.css';
-                document.getElementById('stylesheet').setAttribute('href', newStyle);
-                localStorage.setItem('preferredStyle', newStyle);
-            }
-
-            window.onload = function() {
-                const savedStyle = localStorage.getItem('preferredStyle');
-                if (savedStyle) {
-                    document.getElementById('stylesheet').setAttribute('href', savedStyle);
-                }
-            }
-        </script>
         <img src="pics/halpic2.jpg" alt="me">
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -38,36 +38,7 @@
             </p>
         </div>
     </div>
-    <script>
-        window.onload = function() {
-            const savedStyle = localStorage.getItem('preferredStyle');
-            const stylesheet = document.getElementById('stylesheet');
-            const projectImages = [
-                document.getElementById("service1"),
-                document.getElementById("service2"),
-                document.getElementById("service3")
-            ];
-
-            
-            if (savedStyle) {
-                stylesheet.setAttribute('href', savedStyle);
-                changeImages(savedStyle);
-            }
-
-           
-            function changeImages(style) {
-                if (style === 'style2.css') {
-                    projectImages[0].src = "pics/halPixel.png"; 
-                    projectImages[1].src = "pics/JApixel.png"; 
-                    projectImages[2].src = "pics/secMilepixel.png"; 
-                } else {
-                    projectImages[0].src = "pics/halVolunteer.jpg"; 
-                    projectImages[1].src = "pics/JA.jpg"; 
-                    projectImages[2].src = "pics/secondMile.jpg"; 
-                }
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
 
