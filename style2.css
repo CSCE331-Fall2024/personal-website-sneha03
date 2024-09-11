@@ -55,16 +55,21 @@ nav ul li a:hover {
     align-items: center;
     text-align: center;
     max-width: 800px;
-    padding: 2em;
+    padding: 1em;
 }
 
 .home img {
-    display: none;
+    text-align: center;
+    width: 200px;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .home h1 {
     color: #ec45d3;
     font-size: 60px;
+    margin-bottom: 5px;
 }
 
 @keyframes moveLeftRight {
@@ -79,7 +84,6 @@ nav ul li a:hover {
     100% { transform: translateX(0); }
 }
 
-/* Apply the animation to the images */
 .cloud1 img {
     animation: moveLeftRight 2s infinite; 
 }
