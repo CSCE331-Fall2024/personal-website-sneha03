@@ -8,11 +8,11 @@
     <script>
         (function() {
             const savedStyle = localStorage.getItem('preferredStyle');
-            if (savedStyle) {
-                document.write(`<link id="stylesheet" rel="stylesheet" href="${savedStyle}">`);
-            } else {
-                document.write('<link id="stylesheet" rel="stylesheet" href="styles.css">');
-            }
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.id = 'stylesheet';
+            link.href = savedStyle || 'styles.css';  // Default to styles.css
+            document.head.appendChild(link);
         })();
     </script>
 </head>
@@ -34,7 +34,7 @@
             </div>
             <p>
                 Howdy!
-                My name is Sneha Sivakumar. I am a Junior Computer Science student minoring in Statistics at Texas A&M University. 
+                My name is Sneha Sivakumar. I am a Junior Computer Science student minoring in Statistics at <a href="https://www.tamu.edu/index.html"> Texas A&M University</a>. 
                 My passion for pursuing a career in the technology field stems from my fascination with the everchanging field of technology and 
                 with the desire to help advocate for a stronger female representation in this field. 
                 From an early age, my fascination with technology rose as I actively sought out opportunities that fostered my passion for 
@@ -42,7 +42,7 @@
                 
             </p>
             <p>
-                This past summer, I interned at Halliburton as a Research & Development – Software Development intern for the Production Solutions team. 
+                This past summer, I interned at <a href="https://www.halliburton.com/"> Halliburton</a> as a Research & Development – Software Development intern for the Production Solutions team. 
                 My project focused on enabling real-time data communication of the oil wells to Halliburton’s Well Intervention software using OPC UA. 
                 I was able to significantly contribute to the possibility of equipment automation and understand how the data I acquired in my project can be 
                 utilized to enhance efficiency.
