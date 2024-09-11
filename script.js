@@ -2,13 +2,10 @@ function toggleStyle() {
     const styleSheetLink = document.getElementById('stylesheet');
     const currentStyleSheet = styleSheetLink.getAttribute('href');
 
-    // Determine the new style
     const newStyle = currentStyleSheet === 'styles.css' ? 'style2.css' : 'styles.css';
 
-    // Apply the new style
     applyStyle(newStyle);
 
-    // Check the current page and update the corresponding images
     const currentPage = window.location.pathname;
     if (currentPage.includes('projects.html')) {
         updateProjectImages(newStyle);
@@ -48,7 +45,7 @@ function updateServiceImages(style) {
 }
 
 function changeImages(style, images, pixelImage1, pixelImage2, pixelImage3, normalImage1, normalImage2, normalImage3) {
-    if (images.some(img => img !== null)) { // Check if any images are not null
+    if (images.some(img => img !== null)) { 
         if (style === 'style2.css') {
             images[0].src = pixelImage1; 
             images[1].src = pixelImage2; 
@@ -69,7 +66,6 @@ window.onload = function() {
         stylesheet.setAttribute('href', savedStyle);
     }
 
-    // Check the current page and update images on page load
     const currentPage = window.location.pathname;
     if (currentPage.includes('projects.html')) {
         updateProjectImages(savedStyle || 'styles.css');
