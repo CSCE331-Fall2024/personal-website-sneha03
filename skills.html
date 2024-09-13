@@ -5,16 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website - Home</title>
     <link rel="preload" href="style2.css" as="style">
-    <script>
-        (function() {
-            const savedStyle = localStorage.getItem('preferredStyle');
-            const link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.id = 'stylesheet';
-            link.href = savedStyle || 'styles.css';  // Default to styles.css
-            document.head.appendChild(link);
-        })();
-    </script>
 </head>
 <body>
     <nav>
@@ -62,7 +52,7 @@
                  and it might even be because of my interest in math!
             </p>
         </div>
-        
+
         <a href="https://drive.google.com/file/d/1uzQx_TbP-HecU2MU_XbT2_prcK6SCTfW/preview" target="_blank">
             <img src="pics/resumeImage.png" alt="resume" class="clickable-image" loading="lazy">
         </a>
@@ -70,7 +60,6 @@
         <div class="resume">
             <iframe src="https://drive.google.com/file/d/1uzQx_TbP-HecU2MU_XbT2_prcK6SCTfW/preview" width="600" height="500" loading="lazy"></iframe>
 
-        
     </div>
     
     <script src="script.js"></script>

@@ -1,3 +1,14 @@
+// Load and apply the preferred stylesheet faster on page load
+(function() {
+    const savedStyle = localStorage.getItem('preferredStyle');
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.id = 'stylesheet';
+    link.href = savedStyle || 'styles.css';
+    document.head.appendChild(link);
+})();
+
+// Function to toggle the style
 function toggleStyle() {
     const styleSheetLink = document.getElementById('stylesheet');
     const currentStyleSheet = styleSheetLink.getAttribute('href');
@@ -14,12 +25,14 @@ function toggleStyle() {
     }
 }
 
+// Function to apply a new style and store it in localStorage
 function applyStyle(style) {
     const styleSheetLink = document.getElementById('stylesheet');
     styleSheetLink.setAttribute('href', style);
     localStorage.setItem('preferredStyle', style);
 }
 
+// Functions to update project and service images based on the style
 function updateProjectImages(style) {
     const projectImages = [
         document.getElementById("project1"),
@@ -44,6 +57,7 @@ function updateServiceImages(style) {
                  'pics/halVolunteer.jpg', 'pics/JA.jpg', 'pics/secondMile.jpg');
 }
 
+// Helper function to change images based on the style
 function changeImages(style, images, pixelImage1, pixelImage2, pixelImage3, normalImage1, normalImage2, normalImage3) {
     if (images.some(img => img !== null)) { 
         if (style === 'style2.css') {
@@ -58,6 +72,7 @@ function changeImages(style, images, pixelImage1, pixelImage2, pixelImage3, norm
     }
 }
 
+// On window load, apply the preferred style and update images accordingly
 window.onload = function() {
     const savedStyle = localStorage.getItem('preferredStyle');
     const stylesheet = document.getElementById('stylesheet');

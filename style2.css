@@ -14,6 +14,7 @@ body {
     font-family: "pixelFont";
 }
 
+/* Home Page */
 nav {
     padding: 1em;
     position: absolute;
@@ -110,7 +111,7 @@ nav ul li a:hover {
     height: auto;
 }
 
-.bio {
+.homebio {
     font-size: 20px;
     color: white;
     margin-top: 20px;
@@ -138,6 +139,7 @@ button:hover {
     color: #d23bbb;
 }
 
+/* Projects Page */
 .projects-container {
     display: flex;
     flex-direction: row;
@@ -166,6 +168,8 @@ button:hover {
     max-width: 600px;
     word-wrap: break-word;
 }
+
+/* About Me Page */
 
 .tech-container {
     display: grid;
@@ -210,7 +214,7 @@ button:hover {
     line-height: 1.6;
 }
 
-
+/* Service Page */
 .service-container {
     display: flex;
     flex-direction: row;
@@ -237,6 +241,7 @@ button:hover {
     color: white;
 }
 
+/* AI Page */
 .contact-container {
     
     padding: 2em;

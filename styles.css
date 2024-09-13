@@ -70,7 +70,7 @@ h1 {
     color: #333;
 }
 
-.bio {
+.homebio {
     font-size: 1em;
     color: black;
     margin: 1em 0;
@@ -184,7 +184,7 @@ button:hover {
 }
 
 .clickable-image:hover {
-    opacity: 0.8; /* Optional: Change opacity on hover */
+    opacity: 0.8; 
 }
 
 .techbio h1 {
@@ -248,7 +248,7 @@ h1 {
     margin: 1em 0;
 }
 .contact-info a {
-    color: #4A7C59; /* Darker sage green for links */
+    color: #4A7C59; 
     text-decoration: none;
     font-size: 1.2em;
     display: flex;
@@ -258,7 +258,7 @@ h1 {
     transition: color 0.3s ease;
 }
 .contact-info a:hover {
-    color: #2E5B42; /* Even darker sage green on hover */
+    color: #2E5B42;
 }
 .contact-info a img {
     margin-right: 8px;
